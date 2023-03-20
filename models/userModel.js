@@ -11,11 +11,12 @@ const UserSchema = mongoose.Schema({
     } , 
     location :{
         type : Object , 
-        required : true 
+        required : false
     } ,
     contact :{
         type : Number , 
         required : true , 
+        unique:true , 
     }
 })
 

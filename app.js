@@ -7,4 +7,10 @@ const errorMiddleware = require('./middleware/error');
 app.use(express.json());
 app.use(cookiePareser());
 
+const user = require("./Routes/userRoutes");
+
+app.use("/api/v1",user);
+
+app.use(errorMiddleware);
+
 module.exports = app ;
