@@ -39,11 +39,7 @@ exports.login = catchAsyncError(async(req , res , next)=>{
     if( !user ){ return next(new ErrorHandler("User Not Found" , 404)); }
     else{
         console.log(user.id);
-        // localStorage.setItem('id' , user.id);
-        window.localStorage.setItem('id' , user.id)
+        res.send(user.id)
     }
-    res.status(200).json({
-        success:true,
-        user
-    })
+
 })
